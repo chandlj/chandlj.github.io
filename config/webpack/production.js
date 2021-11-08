@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -23,7 +22,7 @@ module.exports = {
   module: { rules },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(process.cwd(), "frontend", "index.html"),
+      template: path.join(process.cwd(), 'frontend', 'index.html'),
       files: {
         js: ['[name].js'],
       },

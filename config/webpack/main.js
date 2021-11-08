@@ -7,15 +7,15 @@ const HOST = process.env.HOST || '0.0.0.0';
 const PORT = process.env.PORT || '8080';
 
 module.exports = {
-  entry: path.join(process.cwd(), "frontend", "js", "main.js"),
-  mode: "development",
-  devtool: process.env.WEBPACK_DEVTOOL || "eval-source-map",
+  entry: path.join(process.cwd(), 'frontend', 'js', 'main.js'),
+  mode: 'development',
+  devtool: process.env.WEBPACK_DEVTOOL || 'eval-source-map',
   output: {
-    path:path.resolve(process.cwd(), "dist"),
-    filename: "[name].js"
+    path: path.resolve(process.cwd(), 'dist'),
+    filename: '[name].js',
   },
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: ['.js', '.jsx'],
     alias: {
       js: path.join(process.cwd(), 'frontend', 'js'),
     },
@@ -35,10 +35,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(process.cwd(), "frontend", "index.html"),
+      template: path.join(process.cwd(), 'frontend', 'index.html'),
       files: {
-        js: ["[name].js"]
-      }
+        js: ['[name].js'],
+      },
     }),
   ],
-}
+};
