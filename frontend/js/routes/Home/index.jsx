@@ -5,7 +5,8 @@ import Header from 'js/common/Header';
 export default function Home(props) {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
+      <div>Hello World</div>
     </>
   );
 }

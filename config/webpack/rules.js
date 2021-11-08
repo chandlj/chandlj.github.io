@@ -1,22 +1,25 @@
+const path = require('path');
+// This file tells webpack how to load each file type
 module.exports = [
   {
-    test: /\.?js$/,
-    exclude: /node_modules/,
-    use: {
-      loader: "babel-loader",
-      options: {
-        presets: ['@babel/preset-env', '@babel/preset-react']
-      }
-    }
+    test: /\.jsx?$/,
+    include: [
+      path.resolve('./frontend/js'),
+    ],
+    exclude: /(node_modules|bower_components|public\/)/,
+    loader: 'babel-loader',
   },
   {
-    test: /\.?jsx$/,
-    exclude: /node_modules/,
-    use: {
-      loader: "babel-loader",
-      options: {
-        presets: ['@babel/preset-env', '@babel/preset-react']
-      }
-    }
+    test: /\.js?$/,
+    include: [
+      path.resolve('./frontend/js'),
+    ],
+    exclude: /(node_modules|bower_components|public\/)/,
+    loader: 'babel-loader',
   },
-]
+  {
+    test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+    exclude: /(node_modules|bower_components)/,
+    loader: 'file-loader',
+  },
+];

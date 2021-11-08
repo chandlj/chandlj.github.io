@@ -1,14 +1,16 @@
+const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const rules = require('./rules');
 
 module.exports = {
-  entry: { main: './frontend/js/main.js' },
+  entry: path.join(process.cwd(), 'frontend', 'js', 'main.js'),
   mode: 'production',
   output: {
-    path: path.join(process.cwd(), 'build'),
+    path: path.resolve(process.cwd(), 'build'),
     filename: '[name].js',
+    clean: true,
   },
   optimization: {
     minimize: true,
@@ -26,6 +28,12 @@ module.exports = {
       files: {
         js: ['[name].js'],
       },
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+      },
+      __DEVELOPMENT__: false,
     }),
   ],
 };
