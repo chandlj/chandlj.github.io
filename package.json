@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "homepage": "https://chandlj.github.io",
+  "homepage": "https://chandlj.github.io/website",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/styles": "^4.11.4",
