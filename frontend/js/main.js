@@ -1,14 +1,20 @@
+/* eslint
+  react/jsx-filename-extension: "off",
+*/
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes as RouterRoutes, Route } from 'react-router-dom';
 
 import App from './App';
-import Routes from './routes';
+import Home from './components/Home';
 
 ReactDOM.render(
   <Router>
     <App>
-      <Routes />
+      <RouterRoutes>
+        <Route path="/" element={<Home />} />
+      </RouterRoutes>
     </App>
   </Router>,
   document.getElementById('root')

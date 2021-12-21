@@ -22,4 +22,11 @@ module.exports = [
     exclude: /(node_modules|bower_components)/,
     loader: 'file-loader',
   },
+  {
+    test: /\.(pdf|jpe?g|png|gif|svg)$/i,
+    loader: 'file-loader',
+    options: {
+      name: 'frontend/assets/[name].[ext]',
+    },
+  },
 ];
