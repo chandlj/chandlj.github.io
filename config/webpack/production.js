@@ -19,6 +19,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
     alias: {
       js: path.join(process.cwd(), 'frontend', 'js'),
+      assets: path.join(process.cwd(), 'frontend', 'assets'),
     },
   },
   module: { rules },
