@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Paper, Typography, Grid, Box,
+  Paper, Typography, Box, Container,
 } from '@material-ui/core';
 
 import { makeStyles } from '@material-ui/styles';
@@ -13,7 +13,7 @@ export default function Work() {
   const classes = useStyles();
   return (
     <>
-      <Grid container direction="row" style={{ display: 'flex' }}>
+      <Container className={classes.container}>
         <Paper className={classes.workBackground} square elevation={0}>
           <Typography variant="h1" style={{ fontWeight: 'bold', color: '#fff' }}>WORK</Typography>
         </Paper>
@@ -39,12 +39,12 @@ export default function Work() {
               Software Engineering Intern
             </Typography>
             <Typography>
-              Developed a full-stack application using JavaScript and React. Designed to help route
-              traffic from online ads to various landing pages, the app increased team productivity
-              by over 20% and is currently in a quality assurance environment. Additionally built
-              several data pipelines to the data warehouse and used SQL queries to visualize company
-              data. The data visualizations helped drive company focus on profitable segments and
-              drove revenue by over $100,000.
+              Developed a full-stack application using JavaScript and React. Designed to help
+              route traffic from online ads to various landing pages, the app increased team
+              productivity by over 20% and is currently in a quality assurance environment.
+              Additionally built several data pipelines to the data warehouse and used SQL
+              queries to visualize company data. The data visualizations helped drive company
+              focus on profitable segments and drove revenue by over $100,000.
             </Typography>
           </Box>
           <Box style={{ marginBottom: 20 }}>
@@ -55,10 +55,10 @@ export default function Work() {
               Robotic Process Automation (RPA) Intern | June 2021 - August 2021
             </Typography>
             <Typography>
-              Designed a tool for ingesting financial data to power data visualization and increase
-              productivity by automating the upload process. Additionally assisted in redesigning
-              the app’s data processing and storage flow which dramatically increased live app
-              performance by over 85%.
+              Designed a tool for ingesting financial data to power data visualization and
+              increase productivity by automating the upload process. Additionally assisted
+              in redesigning the app’s data processing and storage flow which dramatically
+              increased live app performance by over 85%.
             </Typography>
           </Box>
           <Box style={{ marginBottom: 20 }}>
@@ -78,7 +78,7 @@ export default function Work() {
             </Typography>
           </Box>
         </Paper>
-      </Grid>
+      </Container>
     </>
   );
 }

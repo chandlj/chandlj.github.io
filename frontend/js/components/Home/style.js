@@ -1,13 +1,19 @@
 const style = (theme) => ({
+  backgroundContainer: {
+    width: '100vw',
+    height: '100vh',
+  },
   background: {
+    height: '100%',
     width: '100%',
-    height: '92vh',
     backgroundColor: theme.palette.primary.main,
+    display: 'flex',
+    flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    borderPadding: 0,
     textAlign: 'center',
-    padding: '200px',
+    overflow: 'visible',
+    boxSizing: 'border-box',
   },
   titleName: {
     color: theme.palette.common.white,

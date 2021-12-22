@@ -20,21 +20,25 @@ export default function Home() {
   const classes = useStyles();
 
   return (
-    <Grid container direction="column">
-      <Grid item xs={12}>
-        <Header />
-        <Paper className={classes.background} square>
-          <Typography variant="h1" className={classes.titleName}>
-            JOSEPH CHANDLER
-          </Typography>
-          <Typography variant="h4" className={classes.subTitle}>
-            Software Engineer | Data Scientist
-          </Typography>
-          <Button variant="contained" className={classes.resumeButton} href={Resume}>
-            RESUME
-            <DownloadIcon />
-          </Button>
-        </Paper>
+    <>
+      <Grid container direction="column" className={classes.backgroundContainer}>
+        <Grid item xs={12}>
+          <Header />
+          <Paper className={classes.background} square>
+            <Typography variant="h1" className={classes.titleName}>
+              JOSEPH CHANDLER
+            </Typography>
+            <Typography variant="h4" className={classes.subTitle}>
+              <span>Software Engineer</span>
+              <span> | </span>
+              <span>Data Scientist</span>
+            </Typography>
+            <Button variant="contained" className={classes.resumeButton} href={Resume}>
+              RESUME
+              <DownloadIcon />
+            </Button>
+          </Paper>
+        </Grid>
       </Grid>
       <section id="about">
         <About />
@@ -45,6 +49,6 @@ export default function Home() {
       <section id="contact">
         <Contact />
       </section>
-    </Grid>
+    </>
   );
 }

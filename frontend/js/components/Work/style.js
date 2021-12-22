@@ -1,18 +1,35 @@
 const style = (theme) => ({
   workBackgroundText: {
-    width: '60vw',
-    height: '100vh',
+    minHeight: '100vh',
     backgroundColor: theme.palette.common.white,
-    border: '40px solid white',
+    padding: 50,
   },
   workBackground: {
-    width: '40vw',
-    height: '100vh',
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+      height: '20vh',
+      padding: '20px 0px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      width: '100%',
+      height: '100vh',
+      padding: '50px 0px',
+      alignItems: 'center',
+    },
     backgroundColor: theme.palette.secondary.dark,
     justifyContent: 'center',
     display: 'flex',
-    border: '40px solid white',
-    padding: '300px 0px',
+    border: '20px solid white',
+  },
+  container: {
+    width: '100%',
+    display: 'flex',
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column',
+    },
+    [theme.breakpoints.up('lg')]: {
+      flexDirection: 'row',
+    },
   },
 });
 

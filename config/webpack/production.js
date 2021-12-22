@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const rules = require('./rules');
 
@@ -29,6 +30,11 @@ module.exports = {
       files: {
         js: ['[name].js'],
       },
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: path.resolve(process.cwd(), 'CNAME') },
+      ],
     }),
     new webpack.DefinePlugin({
       'process.env': {

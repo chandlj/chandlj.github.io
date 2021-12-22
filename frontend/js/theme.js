@@ -1,4 +1,4 @@
-import { createTheme } from '@material-ui/core/styles';
+import { createTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
 /*
   Using the MUI theme color geneartor:
@@ -84,4 +84,4 @@ export const dark = createTheme({
   },
 });
 
-export default createTheme(baseTheme);
+export default responsiveFontSizes(createTheme(baseTheme));

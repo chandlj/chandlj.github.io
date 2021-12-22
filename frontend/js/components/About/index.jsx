@@ -25,7 +25,6 @@ export default function About() {
         direction="column"
         alignItems="center"
         justifyContent="center"
-        style={{ minHeight: '100vh' }}
       >
         <Grid container direction="row">
           <Paper className={classes.aboutText} square>
@@ -35,9 +34,9 @@ export default function About() {
             >
               About Me
             </Typography>
-            <Box style={{ display: 'flex' }}>
-              <Avatar src={Portrait} alt="portrait" style={{ marginLeft: 'auto', width: 150, height: 150 }} />
-              <Box style={{ width: 600, marginLeft: 20, marginRight: 'auto' }}>
+            <Box className={classes.aboutParagraph}>
+              <Avatar src={Portrait} alt="portrait" className={classes.avatar} />
+              <Box style={{ width: '75%', marginLeft: 'auto', marginRight: 'auto' }}>
                 <Typography
                   variant="body1"
                   style={{
@@ -51,7 +50,7 @@ export default function About() {
                 </Typography>
               </Box>
             </Box>
-            <Container style={{ display: 'flex', paddingTop: 50 }}>
+            <Container className={classes.skillsAndProfileContainer}>
               <Box className={classes.skillsBox}>
                 <Typography variant="h3" style={{ paddingBottom: 20, color: '#000' }}>
                   PROFILE

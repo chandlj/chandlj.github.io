@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "homepage": "https://chandlj.github.io/",
+  "homepage": "www.joechandler.com",
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
@@ -27,6 +27,7 @@
     "@babel/preset-react": "^7.16.0",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.3",
+    "copy-webpack-plugin": "^10.2.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-babel": "^5.3.1",

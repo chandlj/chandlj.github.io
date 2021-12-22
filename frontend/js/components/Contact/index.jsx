@@ -17,36 +17,38 @@ export default function Contact() {
 
   return (
     <Grid container direction="row">
-      <Paper className={classes.contactBackground} square>
-        <Grid
-          container
-          direction="column"
-          style={{
-            width: '50%', marginLeft: 'auto', marginRight: 'auto', textAlign: 'center',
-          }}
-        >
-          <Typography variant="h3" style={{ color: '#fff', paddingBottom: 50 }}>
-            CONTACT ME
-          </Typography>
-          <Grid direction="row" container spacing={8}>
-            <Grid item style={{ marginLeft: 'auto' }}>
-              <IconButton size="large" color="white" href="https://github.com/chandlj">
-                <GitHubIcon fontSize="large" style={{ color: '#fff' }} />
-              </IconButton>
-            </Grid>
-            <Grid item>
-              <IconButton size="large" href="https://www.linkedin.com/in/joseph-a-chandler/">
-                <LinkedInIcon fontSize="large" style={{ color: '#fff' }} />
-              </IconButton>
-            </Grid>
-            <Grid item style={{ marginRight: 'auto' }}>
-              <IconButton size="large" href="mailto:jchand@mit.edu">
-                <EmailIcon fontSize="large" style={{ color: '#fff' }} />
-              </IconButton>
+      <Grid item xs={12} md={12}>
+        <Paper className={classes.contactBackground} square>
+          <Grid
+            container
+            direction="column"
+            style={{
+              width: 'auto', marginLeft: 'auto', marginRight: 'auto', textAlign: 'center',
+            }}
+          >
+            <Typography variant="h3" style={{ color: '#fff', paddingBottom: 50 }}>
+              CONTACT ME
+            </Typography>
+            <Grid direction="row" container spacing={5}>
+              <Grid item style={{ marginLeft: 'auto' }}>
+                <IconButton size="large" color="white" href="https://github.com/chandlj">
+                  <GitHubIcon fontSize="large" style={{ color: '#fff' }} />
+                </IconButton>
+              </Grid>
+              <Grid item>
+                <IconButton size="large" href="https://www.linkedin.com/in/joseph-a-chandler/">
+                  <LinkedInIcon fontSize="large" style={{ color: '#fff' }} />
+                </IconButton>
+              </Grid>
+              <Grid item style={{ marginRight: 'auto' }}>
+                <IconButton size="large" href="mailto:jchand@mit.edu">
+                  <EmailIcon fontSize="large" style={{ color: '#fff' }} />
+                </IconButton>
+              </Grid>
             </Grid>
           </Grid>
-        </Grid>
-      </Paper>
+        </Paper>
+      </Grid>
     </Grid>
   );
 }

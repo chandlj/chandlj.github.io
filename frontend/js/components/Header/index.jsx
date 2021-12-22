@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Link, Toolbar, Divider, Box, Grid,
+  Link, Toolbar, Divider, Box, Grid, Typography,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 
@@ -44,17 +44,19 @@ export default function Header() {
           component="nav"
           variant="regular"
           className={classes.navToolbar}
+          sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
         >
           {sections.map((section) => (
-            <Box sx={{ px: 10 }}>
+            <Box sx={{ px: 2 }}>
               <Link
                 color="inherit"
                 noWrap
                 key={section.title}
                 href={section.url}
-                style={{ fontSize: 18 }}
               >
-                {section.title}
+                <Typography variant="h5">
+                  {section.title}
+                </Typography>
               </Link>
             </Box>
           ))}
