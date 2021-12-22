@@ -29,4 +29,8 @@ module.exports = [
       name: 'frontend/assets/[name].[ext]',
     },
   },
+  {
+    test: /\.css$/i,
+    use: ['css-loader'],
+  },
 ];

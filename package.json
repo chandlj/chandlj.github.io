@@ -28,6 +28,7 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.3",
     "copy-webpack-plugin": "^10.2.0",
+    "css-loader": "^6.5.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-babel": "^5.3.1",
@@ -47,7 +48,7 @@
     "dev": "webpack serve --config ./config/webpack/main.js",
     "build": "webpack --config ./config/webpack/production.js",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -b master -d build"
+    "deploy": "gh-pages -b gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "airbnb"
