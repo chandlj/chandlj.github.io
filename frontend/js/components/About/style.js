@@ -2,8 +2,8 @@ const style = (theme) => ({
   header: {
     color: theme.palette.secondary.main,
     fontWeight: 'bold',
-    paddingLeft: 20,
     paddingTop: 50,
+    textAlign: 'center',
   },
   aboutText: {
     width: '100%',
@@ -22,6 +22,9 @@ const style = (theme) => ({
     [theme.breakpoints.up('sm')]: {
       flexDirection: 'row',
     },
+    maxWidth: '75%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
   avatar: {
     width: 150,
@@ -29,6 +32,7 @@ const style = (theme) => ({
     marginLeft: 'auto',
     [theme.breakpoints.down('sm')]: {
       marginRight: 'auto',
+      marginTop: 20,
     },
   },
   skillsAndProfileContainer: {
@@ -51,10 +55,20 @@ const style = (theme) => ({
       width: 500,
     },
     paddingTop: 20,
-    marginLeft: 'auto',
-    marginRight: 'auto',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  skillsBoxLeft: {
+    [theme.breakpoints.down('sm')]: {
+      marginRight: 'auto',
+    },
+    marginLeft: 'auto',
+  },
+  skillsBoxRight: {
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: 'auto',
+    },
+    marginRight: 'auto',
   },
   dataBox: {
     width: '75%',

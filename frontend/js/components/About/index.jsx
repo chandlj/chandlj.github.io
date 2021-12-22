@@ -45,13 +45,13 @@ export default function About() {
                 >
                   I am a second-year student at Massachusetts Institute of Technology
                   studying Computer Science and Engineering. I have experience building full-stack
-                  applications using Node.js and React. I also have experience using Python for
-                  building data pipelines and machine learning.
+                  applications using Node.js and React. Additionally, I have experience with
+                  machine learning and data science using Python, PyTorch, and SciKit Learn.
                 </Typography>
               </Box>
             </Box>
             <Container className={classes.skillsAndProfileContainer}>
-              <Box className={classes.skillsBox}>
+              <Box className={`${classes.skillsBoxLeft} ${classes.skillsBox}`}>
                 <Typography variant="h3" style={{ paddingBottom: 20, color: '#000' }}>
                   PROFILE
                 </Typography>
@@ -86,7 +86,7 @@ export default function About() {
                   </Typography>
                 </Box>
               </Box>
-              <Box className={classes.skillsBox}>
+              <Box className={`${classes.skillsBoxRight} ${classes.skillsBox}`}>
                 <Typography variant="h3" style={{ paddingBottom: 20, color: '#000' }}>
                   SKILLS
                 </Typography>
