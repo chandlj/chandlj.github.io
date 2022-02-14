@@ -1,19 +1,36 @@
+import computerPhoto from 'assets/computer_photo.jpg';
+
 const style = (theme) => ({
   backgroundContainer: {
     width: '100vw',
-    height: '100vh',
+    height: '90vh',
+    marginBottom: '50px',
+    '@media (max-width: 950px)': {
+      height: '40vh',
+    },
+    '@media (max-width: 600px)': {
+      height: '30vh',
+    },
+    '@media (max-width: 400px)': {
+      height: '29vh',
+    },
   },
   background: {
     height: '100%',
     width: '100%',
-    backgroundColor: theme.palette.primary.main,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    overflow: 'visible',
+    overflow: 'hidden',
     boxSizing: 'border-box',
+    background: `url(${computerPhoto})`,
+    backgroundSize: '100vw',
+    backgroundRepeat: 'no-repeat',
+    objectFit: 'cover',
+    objectPosition: '100% 0',
+    opacity: 0.8,
   },
   titleName: {
     color: theme.palette.common.white,
@@ -29,6 +46,10 @@ const style = (theme) => ({
     fontWeight: 'bold',
     borderRadius: 15,
     width: 150,
+    '@media (max-width: 400px)': {
+      height: '30px',
+      fontSize: 15,
+    },
   },
 });
 

@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
   Link, Toolbar, Divider, Box, Grid, Typography,
-} from '@material-ui/core';
-import { makeStyles } from '@material-ui/styles';
-
-import styles from './style';
-
-const useStyles = makeStyles(styles);
+} from '@mui/material';
 
 const sections = [
   { title: 'ABOUT', url: '#about' },
@@ -15,7 +10,6 @@ const sections = [
 ];
 
 export default function Header() {
-  const classes = useStyles();
   const [, setScrolled] = useState(false);
 
   const handleScroll = () => {
@@ -35,19 +29,19 @@ export default function Header() {
     <Grid
       justifyContent="center"
       alignItems="stretch"
-      ontainer
+      container
       direction="column"
-      className={classes.navContainer}
+      className="navContainer"
     >
       <Grid item xs={12}>
         <Toolbar
           component="nav"
           variant="regular"
-          className={classes.navToolbar}
+          className="navToolbar"
           sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
         >
-          {sections.map((section) => (
-            <Box sx={{ px: 2 }}>
+          {sections.map((section, i) => (
+            <Box key={i} sx={{ px: 2 }}>
               <Link
                 color="inherit"
                 noWrap

@@ -1,0 +1,32 @@
+.titleToolbar {
+  border-color: black;
+  border-bottom: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navToolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navContainerSticky {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  max-height: 10vh;
+  transition: all .7s ease-in;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  max-height: 10vh;
+}

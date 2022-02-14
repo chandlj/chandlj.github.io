@@ -2,7 +2,7 @@ import React from 'react';
 
 import {
   Paper, Grid, Typography, IconButton,
-} from '@material-ui/core';
+} from '@mui/material';
 import { makeStyles } from '@material-ui/styles';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
