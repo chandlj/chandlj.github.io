@@ -4,19 +4,25 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Routes as RouterRoutes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes as RouterRoutes,
+  Route,
+} from 'react-router-dom';
 
 import App from './App';
-import Hero from './components/Hero';
-import About from './components/About';
-import Layout from './components/Layout';
-import Work from './components/Work';
+import Hero from './components/sections/Hero';
+import About from './components/sections/About';
+import Layout from './components/common/Layout';
+import Work from './components/sections/Work';
+import Contact from './components/sections/Contact';
 
 const Home = () => (
   <Layout>
     <Hero />
     <About />
     <Work />
+    <Contact />
   </Layout>
 );
 

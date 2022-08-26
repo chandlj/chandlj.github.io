@@ -31,7 +31,7 @@ module.exports = [
   },
   {
     test: /\.css$/i,
-    use: ['style-loader', 'css-loader'],
+    use: ['style-loader', 'css-loader', 'postcss-loader'],
   },
   {
     test: /\.s[ac]ss$/i,
@@ -40,6 +40,8 @@ module.exports = [
       'style-loader',
       // Translates CSS into CommonJS
       'css-loader',
+      // Convert tailwind
+      'postcss-loader',
       'resolve-url-loader',
       // Compiles Sass to CSS
       'sass-loader',
