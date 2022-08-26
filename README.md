@@ -1,6 +1,6 @@
 # Website
 
-My personal website build using React and Material UI.
+My personal website build using React🚀 and Tailwind CSS✨.
 
 View the website at www.joechandler.com
 
