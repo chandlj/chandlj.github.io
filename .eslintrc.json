@@ -4,7 +4,8 @@
         "react",
         "import",
         "jsx-a11y",
-        "babel"
+        "babel",
+        "prettier"
     ],
     "parser": "babel-eslint",
     "parserOptions": {
@@ -51,6 +52,7 @@
          "allowTemplateLiterals": true
        }
      ],
+     "arrow-parens": ["error", "as-needed"],
      "comma-dangle": ["error", {
         "arrays": "always-multiline",
         "objects": "always-multiline",
